@@ -19,7 +19,7 @@ const Cart = () => {
             navigate("/");
         }
         if (user && user.role !== "admin") {
-            navigate("/dashboard");
+            navigate("/cart");
         }
     }, [isError, user, navigate]);
     return (

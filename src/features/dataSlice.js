@@ -7,7 +7,7 @@ const apiUrl = import.meta.env.VITE_API_URI;
 export const fetchAllPresensis = createAsyncThunk('data/fetchAllPresensis', async (_, thunkAPI) => {
     try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`${apiUrl}/api/v1/presensis`, {
+        const response = await axios.post(`${apiUrl}/api/v1/presensis`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -24,7 +24,7 @@ export const fetchAllPresensis = createAsyncThunk('data/fetchAllPresensis', asyn
 export const fetchAllIzins = createAsyncThunk('data/fetchAllIzins', async (_, thunkAPI) => {
     try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`${apiUrl}/api/v1/Izins/norespons`, {
+        const response = await axios.post(`${apiUrl}/api/v1/Izins/norespons`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
